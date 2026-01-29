@@ -18,12 +18,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Path mapping for CodeX UI */
-    "paths": {
-      "@codexteam/ui/vue": ["../../node_modules/@codexteam/ui/dist/types/vue/index.d.ts"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

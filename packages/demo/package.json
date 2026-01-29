@@ -1,7 +1,7 @@
 {
   "name": "@codexteam/aipulse-demo",
   "version": "1.0.0",
-  "description": "Demo application showcasing Hawk Error Tracker Auto bugfix feature",
+  "description": "Demo application showcasing Hawk Error Tracker Auto Bugfix feature",
   "type": "module",
   "scripts": {
     "dev": "vite",
