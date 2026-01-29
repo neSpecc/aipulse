@@ -1,8 +1,51 @@
-# @codexteam/typescript-lib-template
-A quick start template for a new TypeScript library
+# AI Pulse
 
-[![NPM version](https://img.shields.io/npm/v/@codexteam/typescript-lib-template?style=flat-square)](https://www.npmjs.com/package/@codexteam/typescript-lib-template)
+A demonstration of the **Auto Bugfix** feature of [Hawk Error Tracker](https://hawk-tracker.ru/).
+
 [![License](https://img.shields.io/npm/l/@codexteam/typescript-lib-template?style=flat-square)](https://www.npmjs.com/package/@codexteam/typescript-lib-template)
+
+## About
+
+This repository showcases the capabilities of **Hawk Error Tracker's Auto Bugfix** feature - an AI-powered solution that automatically suggests fixes for common errors in your applications.
+
+### Hawk Error Tracker
+
+[Hawk](https://hawk-tracker.ru/) is an advanced error tracking service that helps developers:
+- Monitor application errors in real-time
+- Analyze error patterns and trends
+- Get AI-powered automatic bug fix suggestions
+- Improve code quality and reduce debugging time
+
+## Demo Application
+
+This project includes a demo Vue application built with:
+
+- **[CodeX UI](https://www.npmjs.com/package/@codexteam/ui)** - Modern Vue 3 component library with theming support
+- **[CodeX TypeScript Library Template](https://github.com/codex-team/typescript-lib-template)** - Foundation for the project structure
+- **Vue 3** - Latest version of the progressive JavaScript framework
+- **Vite** - Next generation frontend build tool
+
+### Running the Demo
+
+```bash
+# Install dependencies
+yarn install
+
+# Run the demo in development mode
+yarn demo:dev
+
+# Build the demo for production
+yarn demo:build
+
+# Preview the production build
+yarn demo:preview
+```
+
+The demo showcases CodeX UI components including:
+- Navbar with custom branding
+- Tabbar for navigation links
+- PageBlock layout component
+- Pure base theme with Violet accent colors
 
 ## Features 
 
@@ -13,18 +56,8 @@ A quick start template for a new TypeScript library
 - 🥊 npx only-allow yarn
 - 🌶️ Tests with [Vitest](https://vitest.dev)
 - 🍀 GitHub Actions for test/lint/build/publish purposes
+- 🎨 Vue 3 with CodeX UI components
 
-## How to use
-1. Click [here](https://github.com/codex-team/typescript-lib-template/generate) and fill setting for new repository
-2. Update root package `package.json`, change main package name
-3. Update "core" package `package.json`:
-    1. Change `name`
-    2. Adjust `main`, `types`, `exports`
-5. Change name of `packages/core` to your main package name
-5. Go to `packages/utils` and adjust its name or remove the package if you don't need it
-3. Change NPM package scope from [workflow file](./.github/workflows/main.yml) or remove it
-4. Fill `NPM_TOKEN` and `CODEX_BOT_WEBHOOK` secrets in your repository or organization settings
-5. Start writing your new library!
 
 # About CodeX
 
