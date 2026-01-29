@@ -1,0 +1,21 @@
+{
+  "name": "@codexteam/aipulse-demo",
+  "version": "1.0.0",
+  "description": "Demo application showcasing Hawk Error Tracker Auto Bugfix feature",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codexteam/ui": "^0.2.0-rc.4",
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.7",
+    "vue-tsc": "^2.1.10"
+  }
+}
