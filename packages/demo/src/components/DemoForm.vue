@@ -120,8 +120,9 @@ function removeFromCart(product: Product) {
 }
 
 function buy() {
-  const orderId = cart.value[0]?.price || Date.now();
-  console.log("Order sent:", orderId);
+  const orderId = Date.now();
+  const totalPrice = cart.value.reduce((sum, item) => sum + (item.price || 0), 0);
+  console.log("Order sent:", { orderId, totalPrice, items: cart.value.length });
   cart.value = [];
 }
 </script>
