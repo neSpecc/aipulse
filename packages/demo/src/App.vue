@@ -2,7 +2,7 @@
   <div :class="$style.app">
     <Navbar>
       <a
-        :class="$style.logo"
+        :class="[$style.logo, 'text-ui-large']"
         href="/"
       >
         AI Pulse
@@ -12,54 +12,28 @@
           :tabs="[{
             title: 'Hawk Tracker',
             id: 'hawk-button',
-            picture: 'https://hawk.so/assets/logo.svg',
-            link: 'https://hawk-tracker.ru/'
+            picture: HawkLogo,
+            link: 'https://hawk-tracker.ru/?utm_source=aipulse&utm_medium=link&utm_campaign=demo'
           }, {
             title: 'GitHub',
             id: 'github-button',
-            picture: 'https://cdn.svgporn.com/logos/github-icon.svg',
+            picture: GitHubLogo,
             link: 'https://github.com/neSpecc/aipulse'
           }]"
         />
       </template>
     </Navbar>
-    <PageBlock :stretched="true">
+    <PageBlock>
       <div :class="$style.content">
-        <h1>AI Pulse - Auto Bugfix Demo</h1>
-        <p>
-          This is a demonstration application showcasing the <strong>Auto Bugfix</strong> feature 
+        <h1 class="text-h1">
+          Hawk Auto Bugfix
+        </h1>
+        <p class="text-p">
+          This is a demo app showcasing the <strong>Auto Bugfix</strong> feature
           of <a href="https://hawk-tracker.ru/" target="_blank">Hawk Error Tracker</a>.
         </p>
-        
-        <section :class="$style.section">
-          <h2>About Hawk Error Tracker</h2>
-          <p>
-            Hawk is an advanced error tracking service that helps developers monitor, 
-            analyze, and fix bugs in their applications. The Auto Bugfix feature uses 
-            AI to automatically suggest fixes for common errors.
-          </p>
-        </section>
 
-        <section :class="$style.section">
-          <h2>Technologies Used</h2>
-          <ul>
-            <li><strong>CodeX UI</strong> - A modern Vue 3 component library with theming support</li>
-            <li><strong>CodeX TypeScript Library Template</strong> - A quick start template for TypeScript libraries</li>
-            <li><strong>Vue 3</strong> - Progressive JavaScript framework</li>
-            <li><strong>Vite</strong> - Next generation frontend tooling</li>
-          </ul>
-        </section>
-
-        <section :class="$style.section">
-          <h2>Theme Configuration</h2>
-          <p>
-            This demo uses CodeX UI with:
-          </p>
-          <ul>
-            <li><strong>Base Theme:</strong> Pure</li>
-            <li><strong>Accent Theme:</strong> Violet</li>
-          </ul>
-        </section>
+        <DemoForm />
       </div>
     </PageBlock>
     <Popover />
@@ -69,6 +43,9 @@
 
 <script setup lang="ts">
 import { Navbar, PageBlock, Tabbar, Popover, Popup, useTheme, Theme } from '@codexteam/ui/vue';
+import DemoForm from './components/DemoForm.vue';
+import HawkLogo from './assets/hawk-logo.png';
+import GitHubLogo from './assets/github.svg';
 
 /**
  * Initialize theme with Pure base and Violet accent
@@ -85,9 +62,7 @@ setAccentTheme(Theme.Violet);
 }
 
 .logo {
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--base--text);
+  color: var(--base--text-primary);
   text-decoration: none;
 }
 
@@ -96,49 +71,12 @@ setAccentTheme(Theme.Violet);
 }
 
 .content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  a {
+    color: var(--base-text-primary);
+  }
 }
 
-.content h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: var(--base--text);
-}
-
-.content p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--base--text-secondary);
-}
-
-.content a {
-  color: var(--accent--text);
-  text-decoration: none;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}
-
-.section {
-  margin-top: 40px;
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: var(--base--text);
-}
-
-.section ul {
-  padding-left: 20px;
-}
-
-.section li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  color: var(--base--text-secondary);
+:global(.codex-page-block__sidebar) {
+  display: none;
 }
 </style>

@@ -17,9 +17,9 @@
     "lint:fix": "yarn workspaces foreach -A run lint --fix",
     "test": "vitest --watch=false",
     "coverage": "vitest --watch=false --coverage",
-    "demo:dev": "yarn workspace @codexteam/aipulse-demo run dev",
-    "demo:build": "yarn workspace @codexteam/aipulse-demo run build",
-    "demo:preview": "yarn workspace @codexteam/aipulse-demo run preview",
+    "dev": "yarn workspace @codexteam/aipulse-demo run dev",
+    "build": "yarn workspace @codexteam/aipulse-demo run build",
+    "preview": "yarn workspace @codexteam/aipulse-demo run preview",
     "preinstall": "npx only-allow yarn"
   },
   "devDependencies": {
