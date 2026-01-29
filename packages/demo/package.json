@@ -4,13 +4,15 @@
   "description": "Demo application showcasing Hawk Error Tracker Auto Bugfix feature",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "dev": " NODE_ENV=development && vite",
+    "build": " NODE_ENV=production && vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@codexteam/ui": "^0.2.0-rc.4",
-    "vue": "^3.5.27"
+    "@hawk.so/javascript": "^3.2.13",
+    "vue": "^3.5.27",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",

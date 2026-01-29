@@ -97,10 +97,12 @@ __metadata:
   resolution: "@codexteam/aipulse-demo@workspace:packages/demo"
   dependencies:
     "@codexteam/ui": "npm:^0.2.0-rc.4"
+    "@hawk.so/javascript": "npm:^3.2.13"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     typescript: "npm:^5.6.3"
     vite: "npm:^6.0.7"
     vue: "npm:^3.5.27"
+    vue-router: "npm:^4.4.0"
     vue-tsc: "npm:^2.1.10"
   languageName: unknown
   linkType: soft
@@ -594,6 +596,15 @@ __metadata:
   dependencies:
     levn: "npm:^0.4.1"
   checksum: 10c0/ec533ccc99f2ab003d6f64495cff853730fb7d8bc0eaf031ffccc68de7c34c74a2eda50dfa759cacfb409f014c98d306714c995348d5383c9d3140f9f80a5895
+  languageName: node
+  linkType: hard
+
+"@hawk.so/javascript@npm:^3.2.13":
+  version: 3.2.13
+  resolution: "@hawk.so/javascript@npm:3.2.13"
+  dependencies:
+    error-stack-parser: "npm:^2.1.4"
+  checksum: 10c0/c9fd2fefb817307d9e0f7f4e8d3cdfb5fa85fe2b5746100856166c21fc921c4730dff6976c647df16a50082f0afe80e7e9d5cb7ce9f021fa9d554f1aad5a410b
   languageName: node
   linkType: hard
 
@@ -1484,6 +1495,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/devtools-api@npm:^6.6.4":
+  version: 6.6.4
+  resolution: "@vue/devtools-api@npm:6.6.4"
+  checksum: 10c0/0a993ae23618166e1bee5a7c14cebd8312752b93c143cbdd48fb2d0f7ade070d0e6baf757cd920d4681fef8f9acf29515162160f38cc7410f9a684d2df21b6de
+  languageName: node
+  linkType: hard
+
 "@vue/language-core@npm:2.2.12":
   version: 2.2.12
   resolution: "@vue/language-core@npm:2.2.12"
@@ -2168,6 +2186,15 @@ __metadata:
   version: 2.0.3
   resolution: "err-code@npm:2.0.3"
   checksum: 10c0/b642f7b4dd4a376e954947550a3065a9ece6733ab8e51ad80db727aaae0817c2e99b02a97a3d6cecc648a97848305e728289cf312d09af395403a90c9d4d8a66
+  languageName: node
+  linkType: hard
+
+"error-stack-parser@npm:^2.1.4":
+  version: 2.1.4
+  resolution: "error-stack-parser@npm:2.1.4"
+  dependencies:
+    stackframe: "npm:^1.3.4"
+  checksum: 10c0/7679b780043c98b01fc546725484e0cfd3071bf5c906bbe358722972f04abf4fc3f0a77988017665bab367f6ef3fc2d0185f7528f45966b83e7c99c02d5509b9
   languageName: node
   linkType: hard
 
@@ -4764,6 +4791,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stackframe@npm:^1.3.4":
+  version: 1.3.4
+  resolution: "stackframe@npm:1.3.4"
+  checksum: 10c0/18410f7a1e0c5d211a4effa83bdbf24adbe8faa8c34db52e1cd3e89837518c592be60b60d8b7270ac53eeeb8b807cd11b399a41667f6c9abb41059c3ccc8a989
+  languageName: node
+  linkType: hard
+
 "std-env@npm:^3.7.0":
   version: 3.8.0
   resolution: "std-env@npm:3.8.0"
@@ -5398,6 +5432,17 @@ __metadata:
   peerDependencies:
     eslint: ">=6.0.0"
   checksum: 10c0/128be5988de025b5abd676a91c3e92af68288a5da1c20b2ff848fe90e040c04b2222a03b5d8048cf4a5e0b667a8addfb6f6e6565860d4afb5190c4cc42d05578
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:^4.4.0":
+  version: 4.6.4
+  resolution: "vue-router@npm:4.6.4"
+  dependencies:
+    "@vue/devtools-api": "npm:^6.6.4"
+  peerDependencies:
+    vue: ^3.5.0
+  checksum: 10c0/9dcbe1124f1f444ae263ca37914829eea1ebff3feaa182559efee611dfd4436bbebe0ebffdcb60e37fecfb2fbdc691346df00996eeba708485e9ea9b8a7dd193
   languageName: node
   linkType: hard
 

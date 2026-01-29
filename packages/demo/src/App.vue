@@ -1,12 +1,16 @@
 <template>
   <div :class="$style.app">
     <Navbar>
-      <a
+      <RouterLink
         :class="[$style.logo, 'text-ui-large']"
-        href="/"
+        to="/"
       >
         AI Pulse
-      </a>
+      </RouterLink>
+      <Tabbar
+        :tabs="pageTabs"
+        @click="onPageTabClick"
+      />
       <template #right>
         <Tabbar
           :tabs="[{
@@ -23,27 +27,15 @@
         />
       </template>
     </Navbar>
-    <PageBlock>
-      <div :class="$style.content">
-        <h1 class="text-h1">
-          Hawk Auto Bugfix
-        </h1>
-        <p class="text-p">
-          This is a demo app showcasing the <strong>Auto Bugfix</strong> feature
-          of <a href="https://hawk-tracker.ru/" target="_blank">Hawk Error Tracker</a>.
-        </p>
+    <RouterView />
 
-        <DemoForm />
-      </div>
-    </PageBlock>
-    <Popover />
-    <Popup />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Navbar, PageBlock, Tabbar, Popover, Popup, useTheme, Theme } from '@codexteam/ui/vue';
-import DemoForm from './components/DemoForm.vue';
+import { computed } from 'vue';
+import { useRoute, useRouter, RouterView, RouterLink } from 'vue-router';
+import { Navbar, Tabbar, useTheme, Theme } from '@codexteam/ui/vue';
 import HawkLogo from './assets/hawk-logo.png';
 import GitHubLogo from './assets/github.svg';
 
@@ -54,6 +46,28 @@ const { setBaseTheme, setAccentTheme } = useTheme();
 
 setBaseTheme(Theme.Pure);
 setAccentTheme(Theme.Violet);
+
+const route = useRoute();
+const router = useRouter();
+
+const pageTabsConfig = [
+  { path: '/', title: 'Demo' },
+  { path: '/links', title: 'Links' },
+  { path: '/hawk', title: 'Hawk' },
+];
+
+const pageTabs = computed(() =>
+  pageTabsConfig.map((tab) => ({
+    id: tab.path,
+    title: tab.title,
+    path: tab.path,
+    isActive: route.path === tab.path
+  }))
+);
+
+function onPageTabClick(tab: { path: string }) {
+  router.push(tab.path);
+}
 </script>
 
 <style module>
@@ -64,16 +78,12 @@ setAccentTheme(Theme.Violet);
 .logo {
   color: var(--base--text-primary);
   text-decoration: none;
+  margin-right: var(--spacing-l);
+  white-space: nowrap;
 }
 
 .logo:hover {
   color: var(--accent--text);
-}
-
-.content {
-  a {
-    color: var(--base-text-primary);
-  }
 }
 
 :global(.codex-page-block__sidebar) {
