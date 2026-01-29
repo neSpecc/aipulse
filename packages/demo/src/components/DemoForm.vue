@@ -67,23 +67,27 @@ interface Product {
   title: string;
   description?: string;
   image: string;
+  price?: number;
 }
 
 const products: Product[] = [
   {
     id: '1',
     title: 'Товар 1',
-    image: ''
+    image: '',
+    price: 100
   },
   {
     id: '2',
     title: 'Товар 2',
-    image: ''
+    image: '',
+    price: 200
   },
   {
     id: '3',
     title: 'Товар 3',
-    image: ''
+    image: '',
+    price: 300
   }
 ];
 
@@ -116,6 +120,8 @@ function removeFromCart(product: Product) {
 }
 
 function buy() {
+  const orderId = cart.value[0]?.price || Date.now();
+  console.log("Order sent:", orderId);
   cart.value = [];
 }
 </script>
