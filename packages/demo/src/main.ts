@@ -15,7 +15,15 @@ const app = createApp(App);
 app.use(router);
 app.mount('#app');
 
-// new Hawk({
-//   token: import.meta.env.VITE_HAWK_TOKEN,
-//   vue: app,
-// });
+const hawkToken = import.meta.env.VITE_HAWK_TOKEN;
+
+if (!hawkToken || hawkToken.trim() === '') {
+  console.warn(
+    '[Hawk] Token is not defined. Create packages/demo/.env from .env.example and set VITE_HAWK_TOKEN. See README.',
+  );
+} else {
+  new Hawk({
+    token: hawkToken,
+    vue: app,
+  });
+}
