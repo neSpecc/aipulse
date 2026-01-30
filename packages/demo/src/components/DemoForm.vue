@@ -117,9 +117,6 @@ function removeFromCart(product: Product) {
 
 function buy() {
   cart.value = [];
-
-  // const firstPrice = cart.value[0].priced;
-  // console.log('Order sent:', firstPrice);
 }
 </script>
 
