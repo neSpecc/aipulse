@@ -8,6 +8,11 @@ A demonstration of the **Auto Bugfix** feature of [Hawk Error Tracker](https://h
 
 This repository showcases the capabilities of **Hawk Error Tracker's Auto Bugfix** feature - an AI-powered solution that automatically suggests fixes for common errors in your applications.
 
+**Author:** 
+
+- [https://t.me/peter_codex](https://t.me/peter_codex) 
+- [https://x.com/neSpecc](https://x.com/neSpecc)
+
 ### Hawk Error Tracker
 
 [Hawk](https://hawk-tracker.ru/) is an advanced error tracking service that helps developers:
