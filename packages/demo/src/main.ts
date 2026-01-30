@@ -15,7 +15,7 @@ const app = createApp(App);
 app.use(router);
 app.mount('#app');
 
-// new Hawk({
-//   token: import.meta.env.VITE_HAWK_TOKEN,
-//   vue: app,
-// });
+new Hawk({
+  token: import.meta.env.VITE_HAWK_TOKEN,
+  vue: app,
+});
